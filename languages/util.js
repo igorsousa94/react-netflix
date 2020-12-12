@@ -45,7 +45,7 @@ export const configureLanguageToI18n = () => {
     const translate = normalizeTranslate[language]
     const languageVerificate = I18n.translations.hasOwnProperty(translate);
     languageVerificate ? I18n.locale = translate : I18n.defaultLocale = 'pt_BR';
-    console.log(`Traduz ${I18n.t("Search")}`)
+    //console.log(`Traduz ${I18n.t("Search")}`)
 
 
     //return "pt_BR";

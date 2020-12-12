@@ -71,8 +71,6 @@ const Home = (props) => {
         if (user) {
           const data = require('../assets/moviesToResume.json');
           moviesToResume = data[user];
-          moviesToResume.map((e) => console.log(e.Country, e.Poster));
-          //console.log("Continuar assistindo", moviesToResume);
         }
         return (
           <>
