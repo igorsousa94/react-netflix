@@ -9,7 +9,7 @@ import Tabs from './routes/Tabs'
 import ProfileToEdit from './screen/ProfileToEdit';
 import ChooseIcon from './screen/ChooseIcon';
 import Camera from './screen/Camera';
-import ProfileContext from './context/ProfileContext';
+import {ProfileContext} from './context/ProfileContext';
 
 import { configureLanguageToI18n } from './languages/util'
 

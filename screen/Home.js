@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
 import {StatusBar, Dimensions} from 'react-native';
-
 import {LinearGradient} from 'expo-linear-gradient';
 
 import styled from 'styled-components/native';
@@ -9,10 +7,10 @@ import styled from 'styled-components/native';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Movies from '../components/Movies';
-import ProfileContext from '../context/ProfileContext';
 
-//import { filterByCountry, geoLocation, getLocation} from '../services/movieFilter';
+import {ProfileContext} from '../context/ProfileContext';
 import { GetLocation, GetCountry } from '../utils/Location';
+//import { filterByCountry, geoLocation, getLocation} from '../services/movieFilter';
 
 const Container = styled.ScrollView`
   flex: 1;
@@ -73,6 +71,8 @@ const Home = (props) => {
         if (user) {
           const data = require('../assets/moviesToResume.json');
           moviesToResume = data[user];
+          moviesToResume.map((e) => console.log(e.Country, e.Poster));
+          //console.log("Continuar assistindo", moviesToResume);
         }
         return (
           <>
@@ -105,6 +105,7 @@ const Home = (props) => {
       }}
     </ProfileContext.Consumer>
   );
+  
 };
 
 export default Home;
