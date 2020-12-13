@@ -36,7 +36,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 }
-
+/*
 subprojects {
     afterEvaluate {project ->
         if (project.hasProperty("android")) {
@@ -47,3 +47,4 @@ subprojects {
         }
     }
 }
+*/
