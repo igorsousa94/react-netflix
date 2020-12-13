@@ -15,6 +15,8 @@ export const GetLocation = () => {
 };
 
 export const GetCountry = ({ lat, lng }) => {
+
+    /*
     return new Promise((resolve, reject) => {
         Geocoder.geocodePosition({ lat, lng }).then((location) => {
             resolve(location[0].countryCode)
@@ -22,7 +24,19 @@ export const GetCountry = ({ lat, lng }) => {
         }).catch((error) => {
             reject(error)
         })
-
-
+    });
+     */
+    return new Promise((resolve, reject) => {
+        Geocoder.geocodePosition(
+            { lat, lng }
+        ).then((location) => {
+            location.forEach(function(value) {
+                if(value.countryCode !== null){
+                    resolve(value.countryCode);
+                }
+            });
+        }).catch((error) => {
+            reject(error);
+        });
     });
 }
